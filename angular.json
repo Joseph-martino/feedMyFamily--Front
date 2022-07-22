@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "frontfeedMyFamily"
+  "defaultProject": "frontfeedMyFamily",
+  "cli": {
+    "analytics": "1c910d25-873c-4e7a-9f4e-8507fb52f462"
+  }
 }
