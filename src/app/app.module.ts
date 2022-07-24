@@ -5,18 +5,27 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { NewRecipeComponent } from './new-recipe/new-recipe.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { RecipeService } from './services/recipe.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    HomepageComponent
+    HomepageComponent,
+    NewRecipeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [
+    RecipeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

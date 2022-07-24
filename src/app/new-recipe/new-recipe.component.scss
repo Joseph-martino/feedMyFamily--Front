@@ -1,0 +1,17 @@
+.form-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    background-color: #E6E6E6;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
