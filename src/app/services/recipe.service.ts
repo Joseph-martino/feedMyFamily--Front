@@ -1,13 +1,14 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Recipe } from '../models/recipe.model';
 import { environment } from 'src/environments/environment';
+import { HttpClient } from '@angular/common/http';
 
-const apiUrlFilm = environment.API_URL+"/Recipe"
+const apiUrlRecipe = environment.API_URL+"/recipes";
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class HttpRecipeService {
 
   constructor(private http:HttpClient) {
@@ -27,7 +28,7 @@ export class HttpRecipeService {
   }
 
   delete(id:number){
-    return this.http.delete<Recipe>(`${apiUrlERecipe}/${id}`);
+    return this.http.delete<Recipe>(`${apiUrlRecipe}/${id}`);
   }
 
 }

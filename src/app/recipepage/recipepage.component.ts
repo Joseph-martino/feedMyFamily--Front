@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Input, Output,  EventEmitter } from '@angular/core';
 import { Recipe } from '../models/recipe.model';
+
 
 @Component({
   selector: 'app-recipepage',
@@ -9,6 +10,9 @@ import { Recipe } from '../models/recipe.model';
 
 export class RecipepageComponent implements OnInit {
 
+ 
+  @Input() type : any[] = [];
+  @Input() teams: any[] = [];
   @Input() creationDate : Date = new Date();
   @Input() recipe! : Recipe;
   @Output() delete = new EventEmitter();
@@ -16,10 +20,9 @@ export class RecipepageComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
 
-  }
-  
+
     onEdit() {
       this.edit.emit(this.recipe);
     }
