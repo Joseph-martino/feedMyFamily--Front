@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Groupe } from '../models/groupe.model';
 
 @Component({
   selector: 'app-groupepage',
