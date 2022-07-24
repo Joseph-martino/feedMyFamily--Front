@@ -8,6 +8,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { RecipepageComponent } from './recipepage/recipepage.component';
 import {HttpClientModule} from '@angular/common/http';
 import { PagecomponentComponent } from './pagecomponent/pagecomponent.component';
+import { GroupepageComponent } from './groupepage/groupepage.component';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { PagecomponentComponent } from './pagecomponent/pagecomponent.component'
     NavBarComponent,
     HomepageComponent,
     RecipepageComponent,
-    PagecomponentComponent
+    PagecomponentComponent,
+    GroupepageComponent
   ],
   imports: [
     BrowserModule,
