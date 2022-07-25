@@ -19,7 +19,11 @@
         <label for="recipeInstruction">Instruction</label>
         <textarea type="text" id="recipeInstruction" rows="5" cols="50" (change)="onChangeInstructions($event)"></textarea> 
     
-        <button type="submit">Valider la recette</button>
+        <div class="submit-button-container">
+            <button id="submit-button" type="submit">
+                <img src="../../assets/images/icons/submit-icon.png" alt="send icon">
+                Valider la recette</button>
+        </div>
     </form>
 </div>
 

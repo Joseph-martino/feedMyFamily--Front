@@ -1,3 +1,5 @@
+@import "../../assets/common/mixins";
+
 .form-container {
   width: 80%;
   margin: 0 auto;
@@ -8,10 +10,35 @@ form {
   display: flex;
   flex-direction: column;
 
-  input {
+  label {
+    margin: 10px 0 10px 0;
+  }
+
+  input, select, textarea {
     background-color: #E6E6E6;
     border: none;
     padding: 10px;
     border-radius: 10px;
+  }
+
+  button {
+    @include button($salmon);
+    margin-top: 30px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    border-radius: 30px;
+    padding: 4px;
+    width: 200px;
+    img {
+      height: 40px;
+    }
+  }
+
+  .submit-button-container {
+    display: flex;
+    justify-content: flex-end;
   }
 }
