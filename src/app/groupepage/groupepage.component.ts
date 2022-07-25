@@ -10,7 +10,7 @@ export class GroupepageComponent implements OnInit {
 
   @Input() type : any[] = [];
   @Input() teams: any[] = [];
-  @Input() nomMembre : NomMembre = new NomMembre();
+  @Input() nombreMembre : NombreMembre = new NombreMembre();
   @Input() groupe! : Groupe;
   @Output() delete = new EventEmitter();
   @Output() edit = new EventEmitter();

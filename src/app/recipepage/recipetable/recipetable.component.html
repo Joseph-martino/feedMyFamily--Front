@@ -1,0 +1,22 @@
+<header class="header">
+    <h1>MES RECETTES</h1>
+</header>
+
+<button>Créer une recette</button>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Date</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{recipe.name}}</td>
+            <td>{{Date}}</td>
+            <td><button class="bi bi-trash-fill" (click)="onDelete()"></button></td>
+        </tr>
+    </tbody>
+</table>

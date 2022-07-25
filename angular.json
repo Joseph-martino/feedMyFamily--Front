@@ -129,10 +129,6 @@
   },
   "defaultProject": "frontfeedMyFamily",
   "cli": {
-<<<<<<< HEAD
     "analytics": "1c910d25-873c-4e7a-9f4e-8507fb52f462"
-=======
-    "analytics": "29495817-ab4a-4642-b51f-354f9c78b112"
->>>>>>> feat/groupepage
   }
 }

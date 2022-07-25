@@ -7,7 +7,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { RecipepageComponent } from './recipepage/recipepage.component';
 import {HttpClientModule} from '@angular/common/http';
-import { PagecomponentComponent } from './pagecomponent/pagecomponent.component';
+import { RecipetableComponent } from './recipepage/recipetable/recipetable.component';
+import { GroupetableComponent } from './groupepage/groupetable/groupetable.component';
 import { GroupepageComponent } from './groupepage/groupepage.component';
 
 
@@ -17,7 +18,8 @@ import { GroupepageComponent } from './groupepage/groupepage.component';
     NavBarComponent,
     HomepageComponent,
     RecipepageComponent,
-    PagecomponentComponent,
+    RecipetableComponent,
+    GroupetableComponent,
     GroupepageComponent
   ],
   imports: [
