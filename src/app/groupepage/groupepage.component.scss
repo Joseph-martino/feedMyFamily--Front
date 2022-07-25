@@ -1,3 +1,8 @@
-.title {
-    display: flex;
-}
+.position{
+    display :flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  justify-content: space-evenly;
+padding-bottom: 50px;
+
+    }

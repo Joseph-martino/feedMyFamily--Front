@@ -11,9 +11,7 @@ const apiUrlRecipe = environment.API_URL+"/recipes";
 
 export class HttpRecipeService {
 
-  constructor(private http:HttpClient) {
-
-  }
+  constructor(private http:HttpClient) {}
 
   findAll() {
     return this.http.get<Recipe>(apiUrlRecipe);
