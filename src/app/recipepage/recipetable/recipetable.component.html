@@ -20,4 +20,12 @@
         </tr>
     </tbody>
 </table> -->
-<p *ngFor="let recipe of recipes">{{recipe}}</p>
+<div *ngFor="let recipe of recipes">
+  <p>{{recipe.name}}</p>
+  <p>{{recipe.description}}</p>
+  <p>{{recipe.instruction}}</p>
+  <p>{{recipe.visibility}}</p>
+  <p>{{recipe.duration}}</p>
+  <p>{{recipe.difficulty}}</p>
+
+</div>

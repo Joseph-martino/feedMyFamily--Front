@@ -9,12 +9,12 @@ import { HttpRecipeService } from 'src/app/services/recipe.service';
 })
 export class RecipetableComponent implements OnInit {
 
-  recipes: Recipe[] = []; 
+  recipes: any[] = [];
 
-  constructor(private serviceRecipe:HttpRecipeService) { }
+  constructor(private serviceRecipe: HttpRecipeService) { }
 
   ngOnInit(): void {
-    this.serviceRecipe.findAll().subscribe((data)=> this.recipes.push(data));
+    this.serviceRecipe.findByUserId(4).subscribe((data) => this.recipes = data);
   }
 
   onEdit() {
