@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpRecipeService } from 'src/app/services/recipe.service';
+import { Recipe } from '../models/recipe.model';
 
 
 
@@ -9,7 +11,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipepageComponent implements OnInit {
 
-  constructor() { }
+  recipes: Recipe[] = [];
+
+  constructor(private serviceRecipe:HttpRecipeService) {
+    this.serviceRecipe.findAll().subscribe((data)=> this.recipes=data);
+  }
 
   ngOnInit(): void {}
 
