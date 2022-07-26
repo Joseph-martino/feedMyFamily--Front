@@ -1,0 +1,17 @@
+<table>
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Description</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        <tr *ngFor="let recipe of recipes">
+            <td>{{recipe.name}}</td>
+            <td>{{recipe.description}}</td>
+            <td><a [routerLink]="'/recipe/'+recipe.id">Plus de détails</a></td>
+        </tr>
+    </tbody>
+</table>

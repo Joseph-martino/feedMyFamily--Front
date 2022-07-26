@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DifficultyToOptions } from '../constantes';
 import { Difficulty } from '../models/difficulty';
 import { Recipe } from '../models/recipe';
 import { RecipeService } from '../services/recipe.service';
@@ -11,31 +13,12 @@ import { RecipeService } from '../services/recipe.service';
 export class NewRecipeComponent implements OnInit {
 
   recipe!: Recipe;
-  difficultyToOptions!: {
-    value: Difficulty;
-    label: string;
-  }[];
+  difficultyToOptions = DifficultyToOptions;
 
-  constructor(private recipeService: RecipeService) {
+  constructor(private recipeService: RecipeService, private router: Router) {
     this.recipe = {
       visibility: 'public'
     };
-    this.difficultyToOptions = [
-      {
-        value: Difficulty.EASY,
-        label: "Facile"
-      },
-
-      {
-        value: Difficulty.MEDIUM,
-        label: "Moyen"
-      },
-
-      {
-        value: Difficulty.DIFFICULT,
-        label: "Difficile"
-      }  
-    ];
    }
 
   ngOnInit(): void {
@@ -52,8 +35,10 @@ export class NewRecipeComponent implements OnInit {
   }
 
   onSubmitForm(): void {
-    this.recipeService.create(this.recipe).subscribe(
-      () => console.log('recette crée')
+    this.recipeService
+    .create(this.recipe)
+    .subscribe(
+      (result: Recipe) => this.router.navigateByUrl(`/recipe/${result.id}`)
     );
   }
 

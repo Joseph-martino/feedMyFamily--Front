@@ -1,6 +1,4 @@
-<app-nav-bar></app-nav-bar>
 <div class="form-container">
-    <pre>{{recipe | json}}</pre>
     <form #recipeForm="ngForm" (ngSubmit)="onSubmitForm()">
         <label for="recipeName">Nom de la recette</label>
         <input type="text" id="recipeName" name="recipeName" [(ngModel)]="recipe.name">

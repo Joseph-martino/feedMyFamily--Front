@@ -17,4 +17,14 @@ export class RecipeService {
     const url = BASE_URL + PATH;
     return this.httpClient.post(url, recipe);
   }
+
+  getAll(){
+    const url = BASE_URL + PATH;
+    return this.httpClient.get<Recipe[]>(url);
+  }
+
+  getById(id: number){
+    const url = `${BASE_URL}${PATH}/${id}`;
+    return this.httpClient.get<Recipe>(url);
+  }
 }
