@@ -1,4 +1,4 @@
-<header class="header">
+<!-- <header class="header">
     <h1>MES RECETTES</h1>
 </header>
 
@@ -14,9 +14,10 @@
     </thead>
     <tbody>
         <tr>
-            <td>{{recipe.name}}</td>
-            <td>{{Date}}</td>
+            <td></td>
+            <td></td>
             <td><button class="bi bi-trash-fill" (click)="onDelete()"></button></td>
         </tr>
     </tbody>
-</table>
+</table> -->
+<p *ngFor="let recipe of recipes">{{recipe}}</p>

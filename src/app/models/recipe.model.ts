@@ -1,10 +1,11 @@
-export class Recipe {
-    constructor(
-        public id : number,
-        public description : String,
-        public instruction : String,
-        public visibility : String,
-        public duration : number,
-        public difficulty : String
-    ){}
+export interface Recipe {
+
+    id: number;
+    name: String;
+    description: String;
+    instruction: String;
+    visibility: String;
+    duration: number;
+    difficulty: String;
+    userId : number;
 }

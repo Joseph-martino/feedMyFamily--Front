@@ -11,10 +11,7 @@ import { Recipe } from '../models/recipe.model';
 })
 export class RecipepageComponent implements OnInit {
 
-  recipes: Recipe[] = [];
-
-  constructor(private serviceRecipe:HttpRecipeService) {
-    this.serviceRecipe.findAll().subscribe((data)=> this.recipes=data);
+  constructor() {
   }
 
   ngOnInit(): void {}

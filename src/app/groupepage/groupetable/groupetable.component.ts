@@ -1,5 +1,5 @@
 import { Component, OnInit,  Input, Output, EventEmitter } from '@angular/core';
-import { Groupe } from '../models/groupe.model';
+import { Groupe } from 'src/app/models/groupe.model';
 
 @Component({
   selector: 'app-groupetable',
@@ -8,10 +8,8 @@ import { Groupe } from '../models/groupe.model';
 })
 export class GroupetableComponent implements OnInit {
 
-  
-  @Input() type : any[] = [];
-  @Input() teams: any[] = [];
-  @Input() nombreMembre : NombreMembre = new NombreMembre();
+  @Input() name: any[] = [];
+  @Input() nombreMembre! : number;
   @Input() groupe! : Groupe;
   @Output() delete = new EventEmitter();
   @Output() edit = new EventEmitter();

@@ -8,7 +8,7 @@ const apiUrlGroupe = environment.API_URL+"/groupes";
 @Injectable({
   providedIn: 'root'
 })
-export class GroupeService {
+export class HttpGroupeService {
 
   constructor(private http:HttpClient) { }
 

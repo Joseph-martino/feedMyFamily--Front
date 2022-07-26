@@ -1,5 +1,6 @@
-import { Component, OnInit,  Input, Output,  EventEmitter } from '@angular/core';
-import { Recipe } from '../models/recipe.model';
+import { Component, OnInit } from '@angular/core';
+import { Recipe } from 'src/app/models/recipe.model';
+import { HttpRecipeService } from 'src/app/services/recipe.service';
 
 @Component({
   selector: 'app-recipetable',
@@ -8,22 +9,18 @@ import { Recipe } from '../models/recipe.model';
 })
 export class RecipetableComponent implements OnInit {
 
-  @Input() creationDate : Date = new Date();
-  @Input() recipe! : Recipe;
-  @Output() delete = new EventEmitter();
-  @Output() edit = new EventEmitter();
+  recipes: Recipe[] = []; 
 
-  constructor() { }
+  constructor(private serviceRecipe:HttpRecipeService) { }
 
   ngOnInit(): void {
+    this.serviceRecipe.findAll().subscribe((data)=> this.recipes.push(data));
   }
 
   onEdit() {
-    this.edit.emit(this.recipe);
   }
 
   onDelete() {
-    this.delete.emit(this.recipe.id);
   }
 
 }
